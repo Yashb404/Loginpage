@@ -1,4 +1,4 @@
-# Functional Sign-Up Login Page for a Website
+# Functional Sign-Up/Login Page for a Website
 
 Saves the logins locally right now not connected to any db  
 Made in a day for GDG
