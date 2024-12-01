@@ -20,15 +20,15 @@ export const SignupLogin = () => {
   return (
     <div className='container'>
       <div className='header'>
-        <div className='text'>{action}</div>
-        <div className='line'></div>
-      </div>
+    <div className='text'>{action}</div>
+    <div className='line'></div>
+    </div>
 
       <div className='fields'>
         {action === "Login" ? null : (
           <div className='input'>
-            <img src={user_icon} alt='user_icon'/>
-            <input type="text" name="username" value={formData.username} onChange={handleInputChange} placeholder="Username" />
+        <img src={user_icon} alt='user_icon'/>
+        <input type="text" name="username" value={formData.username} onChange={handleInputChange} placeholder="Username" />
           </div>
         )}
    

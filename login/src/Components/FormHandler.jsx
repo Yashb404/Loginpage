@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState ,useCallback } from 'react';
 
 const FormHandler = ({ 
   action, 
@@ -9,7 +9,7 @@ const FormHandler = ({
   onLoginSuccess,
   setAction
 }) => {
-  const handleInputChange = (e) => {
+const handleInputChange = (e) => {
 const { name, value } = e.target;
 setFormData(prevData => ({ ...prevData, [name]: value }));
   };
@@ -24,7 +24,7 @@ setFormData(prevData => ({ ...prevData, [name]: value }));
     setStoredData({ email: formData.email, password: formData.password });
      alert("Sign Up was successful!");
 
-     setTimeout(()=>{setAction("Login");},2000);
+     window.setTimeout(()=>{setAction("Login");},2000);
     } 
     else if (action === "Login") {
     if(formData.email===storedData.email&&formData.password=== storedData.password) {
