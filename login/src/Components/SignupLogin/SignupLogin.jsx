@@ -37,13 +37,13 @@ export const SignupLogin = () => {
         )}
    
         <div className='input'>
-          <img src={mail_icon} alt='email_icon'/>
-          <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email"/>
+        <img src={mail_icon} alt='email_icon'/>
+        <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email"/>
         </div>
 
         <div className='input'>
-          <img src={password_icon} alt='key_icon'/>
-          <input type="password" name="password" value={formData.password} onChange={handleInputChange} placeholder="Password"/>
+        <img src={password_icon} alt='key_icon'/>
+        <input type="password" name="password" value={formData.password} onChange={handleInputChange} placeholder="Password"/>
         </div>
       </div>
 
@@ -52,14 +52,17 @@ export const SignupLogin = () => {
       <div className="forgotPass" onClick={handleForgotPassword}><span>Forgot Password?</span></div>
       
       {action === "Login" ? (
+
         <div className="switch" onClick={() => setAction("Sign Up")}><span>
           Want to sign up instead?</span>
+        
         </div>
       ) : (
        <div className="switch" onClick={() => setAction("Login")}> <span>
           Want to login instead?</span>
         </div>
       )}
+      
     </div>
   )
 }
