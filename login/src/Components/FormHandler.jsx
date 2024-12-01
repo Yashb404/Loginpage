@@ -23,7 +23,7 @@ setFormData(prevData => ({ ...prevData, [name]: value }));
     setStoredData({ email: formData.email, password: formData.password });
      alert("Sign Up was successful!");
     } else if (action === "Login") {
-      if(formData.email===storedData.email&&formData.password== storedData.password) {
+      if(formData.email===storedData.email&&formData.password=== storedData.password) {
         if (onLoginSuccess) {
           onLoginSuccess();
         }
