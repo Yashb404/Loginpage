@@ -16,18 +16,9 @@ export const SignupLogin = () => {
   });
   const [storedData, setStoredData] = useState({ email: "", password: "" });
 
-  const handleLoginSuccess = () => {
-    navigate('/dashboard');
-  };
+  const handleLoginSuccess = () => {navigate('/dashboard');};
 
-  const { handleInputChange, handleSubmit } = FormHandler({
-    action,
-    formData,
-    setFormData,
-    setStoredData,
-    storedData,
-    onLoginSuccess: handleLoginSuccess
-  });
+  const { handleInputChange, handleSubmit } = FormHandler({action,formData,setFormData,setStoredData,storedData,onLoginSuccess: handleLoginSuccess});
   
   return (
     <div className='container'>
@@ -39,36 +30,18 @@ export const SignupLogin = () => {
         {action === "Login" ? null : (
           <div className='input'>
             <img src={user_icon} alt='user_icon'/>
-            <input 
-              type="text"
-              name="username"
-              value={formData.username}
-              onChange={handleInputChange}
-              placeholder="Username"
-            />
+            <input type="text" name="username" value={formData.username} onChange={handleInputChange} placeholder="Username" />
           </div>
         )}
    
         <div className='input'>
           <img src={mail_icon} alt='email_icon'/>
-          <input 
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            placeholder="Email"
-          />
+          <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email"/>
         </div>
 
         <div className='input'>
           <img src={password_icon} alt='key_icon'/>
-          <input 
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleInputChange}
-            placeholder="Password"
-          />
+          <input type="password" name="password" value={formData.password} onChange={handleInputChange} placeholder="Password"/>
         </div>
       </div>
       <div className='submit-box'>
@@ -83,14 +56,8 @@ export const SignupLogin = () => {
           onClick={() => setAction("Login")}
         >
           Login
-        </div>
-      </div>
-      <div 
-        className="submit" 
-        onClick={handleSubmit}
-      >
-        Submit
-      </div>
+        </div></div>
+      <div className="submit" onClick={handleSubmit}>Submit</div>
       <div className="forgotPass"><span>Forgot Password ?</span></div>
     </div>
   )
