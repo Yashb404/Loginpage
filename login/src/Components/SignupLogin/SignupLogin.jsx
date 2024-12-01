@@ -31,7 +31,7 @@ export const SignupLogin = () => {
         <div className="submit">Signup</div>
         <div className="submit">Login</div>
     </div>
-    <div className="forgetPass">Forget Password</div>
+    <div className="forgotPass"><span>Forgot Password ?</span></div>
     </div>
   )
   
