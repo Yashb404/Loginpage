@@ -100,4 +100,12 @@ body {
   .forgotPass span:hover {
     color: #1d2792;
   }
+
+  .input img{
+    margin: 0px 5px;
+  }
   
+  .gray{
+    background: whitesmoke;
+    color: grey;
+  }
