@@ -47,13 +47,13 @@ export const SignupLogin = () => {
       <div className="forgotPass"><span>Forgot Password ?</span></div>
       
       {action === "Login" ? (
-        <span><div className="switch" onClick={() => setAction("Sign Up")}>
-          Want to sign up instead?
-        </div></span>
+        <div className="switch" onClick={() => setAction("Sign Up")}><span>
+          Want to sign up instead?</span>
+        </div>
       ) : (
-        <span><div className="switch" onClick={() => setAction("Login")}>
-          Want to login instead?
-        </div></span>
+       <div className="switch" onClick={() => setAction("Login")}> <span>
+          Want to login instead?</span>
+        </div>
       )}
     </div>
   )
