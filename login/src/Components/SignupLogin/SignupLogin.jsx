@@ -9,16 +9,12 @@ import FormHandler from '../FormHandler';
 export const SignupLogin = () => {
   const navigate = useNavigate();
   const [action, setAction] = useState("Sign Up");
-  const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: ""
-  });
+  const [formData, setFormData] = useState({username: "",email: "",password: ""});
   const [storedData, setStoredData] = useState({ email: "", password: "" });
-
+  
   const handleLoginSuccess = () => {navigate('/dashboard');};
 
-  const { handleInputChange, handleSubmit } = FormHandler({action,formData,setFormData,setStoredData,storedData,onLoginSuccess: handleLoginSuccess});
+  const {handleInputChange,handleSubmit} = FormHandler({action,formData,setFormData,setStoredData,storedData,onLoginSuccess:handleLoginSuccess});
   
   return (
     <div className='container'>
@@ -26,6 +22,7 @@ export const SignupLogin = () => {
         <div className='text'>{action}</div>
         <div className='line'></div>
       </div>
+      
       <div className='fields'>
         {action === "Login" ? null : (
           <div className='input'>
@@ -45,18 +42,10 @@ export const SignupLogin = () => {
         </div>
       </div>
       <div className='submit-box'>
-        <div 
-          className={action === "Login" ? "submit gray" : "submit"} 
-          onClick={() => setAction("Sign Up")}
-        >
-          Signup
+        <div className={action === "Login" ? "submit gray" : "submit"} onClick={() => setAction("Sign Up")}>Signup</div>
+        <div className={action === "Sign Up" ? "submit gray" : "submit"} onClick={() => setAction("Login")}>Login</div>
+        
         </div>
-        <div 
-          className={action === "Sign Up" ? "submit gray" : "submit"} 
-          onClick={() => setAction("Login")}
-        >
-          Login
-        </div></div>
       <div className="submit" onClick={handleSubmit}>Submit</div>
       <div className="forgotPass"><span>Forgot Password ?</span></div>
     </div>
