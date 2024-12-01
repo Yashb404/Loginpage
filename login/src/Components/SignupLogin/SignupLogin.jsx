@@ -43,13 +43,18 @@ export const SignupLogin = () => {
       </div>
 
       
-      <div className='submit-box'>
-        <div className={action === "Login" ? "submit gray" : "submit"} onClick={() => setAction("Sign Up")}>Signup</div>
-        <div className={action === "Sign Up" ? "submit gray" : "submit"} onClick={() => setAction("Login")}>Login</div>
-        
-        </div>
       <div className="submit" onClick={handleSubmit}>Submit</div>
       <div className="forgotPass"><span>Forgot Password ?</span></div>
+      
+      {action === "Login" ? (
+        <span><div className="switch" onClick={() => setAction("Sign Up")}>
+          Want to sign up instead?
+        </div></span>
+      ) : (
+        <span><div className="switch" onClick={() => setAction("Login")}>
+          Want to login instead?
+        </div></span>
+      )}
     </div>
   )
 }
