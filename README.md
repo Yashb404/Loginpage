@@ -1,8 +1,8 @@
 # Functional Sign-Up/Login Page for a Website
 
-Saves the logins locally right now not connected to any db  
-Made in a day for GDG
-The theme tried to mimic the colours of google's sign up page
+  Saves the logins locally right now not connected to any db  
+  Made in a day for GDG
+  The theme tried to mimic the colours of google's sign up page
 
 
 ## Features
