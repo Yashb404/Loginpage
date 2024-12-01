@@ -22,7 +22,7 @@ export const SignupLogin = () => {
         <div className='text'>{action}</div>
         <div className='line'></div>
       </div>
-      
+
       <div className='fields'>
         {action === "Login" ? null : (
           <div className='input'>
@@ -41,6 +41,8 @@ export const SignupLogin = () => {
           <input type="password" name="password" value={formData.password} onChange={handleInputChange} placeholder="Password"/>
         </div>
       </div>
+
+      
       <div className='submit-box'>
         <div className={action === "Login" ? "submit gray" : "submit"} onClick={() => setAction("Sign Up")}>Signup</div>
         <div className={action === "Sign Up" ? "submit gray" : "submit"} onClick={() => setAction("Login")}>Login</div>
