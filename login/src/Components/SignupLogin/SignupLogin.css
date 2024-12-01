@@ -12,7 +12,7 @@ body {
   }
   
   .container {
-    background-color: rgb(47, 44, 44);
+    background-color: hsl(0, 0%, 5%);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 40px 30px;
@@ -86,7 +86,7 @@ body {
   }
   
   .submit:hover {
-    background-color: #1765cc;
+    background-color: #133c71;
   }
   
   .forgotPass span {
