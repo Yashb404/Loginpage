@@ -15,6 +15,10 @@ export const SignupLogin = () => {
   
   const handleLoginSuccess = () => {navigate('/dashboard');};
 
+  const handleForgotPassword = () => { const email = prompt("Please enter your email:"); 
+    if (email === storedData.email) 
+        { alert("Password reset instructions have been sent to your email."); } else { alert("Email not found."); } };
+
   const {handleInputChange,handleSubmit} = FormHandler({action,formData,setFormData,setStoredData,storedData,onLoginSuccess:handleLoginSuccess,setAction});
   
   return (
@@ -45,7 +49,7 @@ export const SignupLogin = () => {
 
       
       <div className="submit" onClick={handleSubmit}>Submit</div>
-      <div className="forgotPass"><span>Forgot Password ?</span></div>
+      <div className="forgotPass" onClick={handleForgotPassword}><span>Forgot Password?</span></div>
       
       {action === "Login" ? (
         <div className="switch" onClick={() => setAction("Sign Up")}><span>
