@@ -19,16 +19,12 @@ setFormData(prevData => ({ ...prevData, [name]: value }));
       return;
     }
 
-    const setToLogin = () => {
-        if (action==="Sign Up"){
-            action="Login";
-        }
-    }
-
     if (action === "Sign Up") {
     setStoredData({ email: formData.email, password: formData.password });
      alert("Sign Up was successful!");
-     setTimeout((setToLogin)=>{},2000);
+     setTimeout((setToLogin)=>{ if (action==="Sign Up"){
+        action="Login";
+    }},2000);
     } 
     else if (action === "Login") {
     if(formData.email===storedData.email&&formData.password=== storedData.password) {
