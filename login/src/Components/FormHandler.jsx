@@ -6,7 +6,8 @@ const FormHandler = ({
   setFormData, 
   setStoredData, 
   storedData, 
-  onLoginSuccess 
+  onLoginSuccess,
+  setAction
 }) => {
   const handleInputChange = (e) => {
 const { name, value } = e.target;
@@ -22,9 +23,8 @@ setFormData(prevData => ({ ...prevData, [name]: value }));
     if (action === "Sign Up") {
     setStoredData({ email: formData.email, password: formData.password });
      alert("Sign Up was successful!");
-     setTimeout((setToLogin)=>{ if (action==="Sign Up"){
-        action="Login";
-    }},2000);
+
+     setTimeout(()=>{setAction("Login");},2000);
     } 
     else if (action === "Login") {
     if(formData.email===storedData.email&&formData.password=== storedData.password) {

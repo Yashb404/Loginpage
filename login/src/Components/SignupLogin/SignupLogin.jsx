@@ -7,6 +7,7 @@ import user_icon from '../assets/user-icon.png'
 import FormHandler from '../FormHandler';
 
 export const SignupLogin = () => {
+
   const navigate = useNavigate();
   const [action, setAction] = useState("Sign Up");
   const [formData, setFormData] = useState({username: "",email: "",password: ""});
@@ -14,7 +15,7 @@ export const SignupLogin = () => {
   
   const handleLoginSuccess = () => {navigate('/dashboard');};
 
-  const {handleInputChange,handleSubmit} = FormHandler({action,formData,setFormData,setStoredData,storedData,onLoginSuccess:handleLoginSuccess});
+  const {handleInputChange,handleSubmit} = FormHandler({action,formData,setFormData,setStoredData,storedData,onLoginSuccess:handleLoginSuccess,setAction});
   
   return (
     <div className='container'>
