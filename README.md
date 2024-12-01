@@ -2,6 +2,7 @@
 
 Saves the logins locally right now not connected to any db  
 Made in a day for GDG
+![image](https://github.com/user-attachments/assets/15ac118b-90fd-4e5a-a89f-9351a303bf48)
 
 ## Features
 
